@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario 1</title>
+    </head>
+    <body>
+        <h2>Reserva de Instalaciones Deportivas</h2>
+        <form action="Formulario.php" method="post">
+            <fieldset>
+                <legend>Datos Personales</legend>
+                <table>
+                    <tr>
+                        <td><label for="nombre">Nombre</label></td>
+                        <td colspan="2"><input type="text" name="nombre" size="50"></td>
+                        <td><label for="domicilio">Domicilio</label></td>
+                        <td colspan="2"><input type="text" name="domicilio" size="50"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="documento">Documento</label></td>
+                        <td><select name="documento">
+                            <option value=""></option>
+                            <option value="dni">Documento Nacional de Identidad</option>
+                            <option value="tarjetaResidencia">Tarjeta de Residencia</option>
+                            <option value="pasaporte">Pasaporte</option>
+                        </select></td>
+                        <td><label for="numeroDoc">Número documento</label></td>
+                        <td><input type="text" name="numeroDoc"></td>
+                        <td><label for="sexo">Sexo</label></td>
+                        <td><input type="radio" name="sexo">Hombre
+                            <input type="radio" name="sexo">Mujer</td>
+                    </tr>
+                    <tr>
+                        <td><label for="telefono">Teléfono</label></td>
+                        <td><input type="number" name="telefono"></td>
+                        <td><label for="mail">Correo Electrónico</label></td>
+                        <td colspan="3"><input type="email" name="mail" size="50"></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend>Datos de la Instalación a reservar</legend>
+                <table>
+                    <tr>
+                        <td><label for="instalacion">Instalación</label></td>
+                        <td><select name="instalacion">
+                            <option value=""></option>
+                            <option value="futbolExterior">Fútbol sala exterior</option>
+                            <option value="futbolInterior">Fútbol sala cubierta</option>
+                            <option value="baloncesto">Baloncesto</option>
+                            <option value="multi">Multipropósito</option>
+                        </select></td>
+                        <td><label for="fecha">Fecha</label></td>
+                        <td><input type="date" name="fecha"></td>
+                        <td><label for="hora">Hora Inicio</label></td>
+                        <td><input type="time" name="hora"></td>
+                        <td><label for="horasMax">Núm. Horas (max. 3 horas)</label></td>
+                        <td><input type="number" name="horasMax" min="1" max="3"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><label for="iluminacion">Contratación de Iluminación</label></td>
+                        <td colspan="2"><input type="radio" name="iluminacion">Sí
+                            <input type="radio" name="iluminacion">No</td>
+                    </tr>
+                    <tr>
+                        <td colspan="8"><input type="checkbox" name="condiciones"><label for="condiciones">Acepta la condiciones del alquiler de instalaciones y normas del complejo deportivo</label></td>
+                    </tr>
+                    <tr>
+                        <td colspan="8" align="center"><input type="submit" name="reservar" value="Proceder a la Reserva">
+                        <input type="reset" name="cancelar" value="Borrar Formulario"></td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+    </body>
+</html>
